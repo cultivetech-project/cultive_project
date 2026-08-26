@@ -5,7 +5,7 @@
 Agent: Codex
 Data: 2026-08-25
 Branch: main
-Commit: pending (`feat: add local cockpit preview`)
+Commit: 9c99997 (`feat(cockpit): add local visual slice`)
 
 ## Objetivo
 
@@ -45,7 +45,7 @@ Consulte o commit desta execução e `git status`.
 - `npm run build`: passou;
 - smoke test no navegador integrado: passou para Dashboard, board, ficha, abas, Proponentes e Diário Oficial;
 - testes de backend/integration: ainda não aplicáveis ao protótipo local;
-- push: pendente até o commit desta execução.
+- push: pendente até a publicação deste commit.
 
 ## Testes pendentes
 
