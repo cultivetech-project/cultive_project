@@ -1,0 +1,30 @@
+# Secrets and local configuration
+.env
+.env.*
+!.env.example
+*.local
+
+# Dependencies and build output
+node_modules/
+dist/
+build/
+.next/
+coverage/
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# IDE and operating system files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Local database/storage artifacts
+*.db
+*.sqlite
+*.sqlite3
+storage/
+uploads/
+
