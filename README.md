@@ -4,12 +4,13 @@ Cockpit Operacional Pré-Aprovação da Cultivo Tech.
 
 ## Status
 
-🟡 Bootstrap concluído; a implementação da aplicação aguarda decisão de stack.
+🟡 Primeiro slice visual local implementado; persistência e stack de produção continuam pendentes.
 
 O Cockpit cobre o fluxo `Primeiro contato → negociação → documentação → submissão → aprovação/reprovação`. Após aprovação, o fluxo segue manualmente no Marcasite. Nesta fase não há integração, scraping, IA autônoma, envio real de WhatsApp/e-mail ou portal externo.
 
 ## O que existe neste repositório
 
+- preview local em Vite + React + TypeScript com Dashboard, Projetos, Proponentes, Diário Oficial e ficha do Projeto;
 - contrato de engenharia para Codex, Claude e pessoas;
 - PRD consolidado a partir do material fornecido;
 - referência UX dos mockups;
@@ -20,9 +21,18 @@ O Cockpit cobre o fluxo `Primeiro contato → negociação → documentação �
 
 ## Próxima decisão necessária
 
-Escolher a stack, banco, storage de documentos, hospedagem e momento da autenticação do MVP. A comparação está em [`docs/architecture/STACK_OPTIONS.md`](docs/architecture/STACK_OPTIONS.md) e permanece com `STATUS: AGUARDANDO DECISÃO DO ROGÉRIO`.
+Escolher a arquitetura de produção, banco, storage de documentos, hospedagem e momento da autenticação do MVP. A comparação está em [`docs/architecture/STACK_OPTIONS.md`](docs/architecture/STACK_OPTIONS.md); o preview local está registrado em [`docs/adr/ADR-001-stack-mvp.md`](docs/adr/ADR-001-stack-mvp.md).
 
 Depois da decisão, a ordem recomendada é: scaffold → infraestrutura local → schema/migrations → seed → primeiro vertical slice → testes → CI → deploy.
+
+## Executar localmente
+
+```bash
+npm install
+npm run dev
+```
+
+Abra o endereço exibido pelo Vite. Para validar a compilação de produção, execute `npm run build`.
 
 ## Estrutura
 
@@ -45,4 +55,3 @@ Segredos devem ficar fora do Git. Use `.env.example` somente como contrato de co
 ## Contribuição
 
 Leia [`AGENTS.md`](AGENTS.md), escolha uma tarefa com owner único, siga o protocolo em [`docs/ai/COLLABORATION.md`](docs/ai/COLLABORATION.md), use Conventional Commits e abra um PR com o template do repositório.
-

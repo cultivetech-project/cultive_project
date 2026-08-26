@@ -1,8 +1,8 @@
 # Opções de stack
 
-**STATUS: AGUARDANDO DECISÃO DO ROGÉRIO**
+**STATUS: Opção A aceita somente para o primeiro slice visual local; backend e produção continuam pendentes.**
 
-Esta é uma comparação inicial, não uma decisão aceita. A recomendação abaixo considera um MVP operacional com CRUD, cálculos derivados, histórico, upload protegido de documentos e evolução para integrações futuras.
+Esta comparação continua sendo a referência para a solução completa. A decisão registrada em [`../adr/ADR-001-stack-mvp.md`](../adr/ADR-001-stack-mvp.md) cobre somente o primeiro slice visual, sem persistência ou integrações.
 
 ## Critérios
 
@@ -28,9 +28,9 @@ Simplicidade, velocidade, manutenção, custo, hospedagem, banco, upload de docu
 - **CI/CD:** todas suportam install, lint, typecheck quando aplicável, test e build em GitHub Actions após a decisão.
 - **Evolução:** A é equilibrada para integrar depois; B é forte para domínio/backoffice; C só justifica a complexidade quando houver clientes independentes ou integrações robustas.
 
-## Recomendação técnica
+## Recomendação técnica para produção
 
-**Recomendo avaliar primeiro a Opção A — full-stack TypeScript + PostgreSQL + storage S3-compatible**, por equilibrar velocidade de entrega, consistência visual com os mockups e futura integração. Isso não autoriza scaffold nem compra/contratação de serviços: a recomendação só se torna decisão após aprovação do Rogério e registro de ADR aceito.
+**Recomendo avaliar primeiro a Opção A — full-stack TypeScript + PostgreSQL + storage S3-compatible**, por equilibrar velocidade de entrega, consistência visual com os mockups e futura integração. Essa decisão de produção continua pendente e exige ADR própria aceita.
 
 ## Decisões que precisam ser tomadas
 
@@ -40,4 +40,3 @@ Simplicidade, velocidade, manutenção, custo, hospedagem, banco, upload de docu
 4. Hospedagem e ambientes.
 5. Autenticação no MVP e modelo de autorização.
 6. Estratégia de observabilidade e custo aceitável.
-

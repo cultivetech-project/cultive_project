@@ -5,7 +5,7 @@
 Agent: Codex
 Data: 2026-08-25
 Branch: main
-Commit: 7dead4a (`docs: record bootstrap handoff`)
+Commit: pending (`feat: add local cockpit preview`)
 
 ## Objetivo
 
@@ -19,13 +19,17 @@ Preparar o repositório do Cultivo Cockpit para trabalho coordenado e decisão d
 - processo de ADR;
 - backlog inicial;
 - templates GitHub e arquivos de segurança.
+- preview local com Dashboard, board, Proponentes, Diário Oficial e ficha do Projeto.
+- abas de Documentos, Financeiro e Comunicação dentro da ficha;
+- dados derivados no cliente e registro de ações durante a sessão.
 
 ## O que ficou pendente
 
 - escolha e aprovação da stack;
 - banco, storage, hospedagem e autenticação;
-- scaffold e implementação da aplicação;
-- CI/CD após definição da stack;
+- persistência, autenticação, storage e integrações reais;
+- CI/CD de produção;
+- testes automatizados da camada de domínio persistente;
 - criação de Issues remotas, caso seja desejada.
 
 ## Arquivos alterados
@@ -37,20 +41,23 @@ Consulte o commit desta execução e `git status`.
 - revisão estrutural dos arquivos obrigatórios: passou;
 - verificação de padrões de segredos no conteúdo criado: passou;
 - `git diff --check`: passou;
-- lint/typecheck/unit/integration/build: não aplicável, não há código da aplicação;
-- push: concluído em `origin/main` após autenticação da conta `cultivetech-project`.
+- `npm run typecheck`: passou;
+- `npm run build`: passou;
+- smoke test no navegador integrado: passou para Dashboard, board, ficha, abas, Proponentes e Diário Oficial;
+- testes de backend/integration: ainda não aplicáveis ao protótipo local;
+- push: pendente até o commit desta execução.
 
 ## Testes pendentes
 
-Após a decisão de stack, configurar lint, typecheck quando aplicável, testes, build e CI.
+Adicionar testes automatizados das regras críticas quando a camada de domínio persistente for criada; configurar lint, typecheck, build e CI de produção conforme a stack definitiva.
 
 ## Decisões necessárias
 
-- consultar `docs/architecture/STACK_OPTIONS.md` para a decisão de stack.
+- consultar `docs/architecture/STACK_OPTIONS.md` para a decisão da stack de produção.
 
 ## Próxima ação recomendada
 
-Rogério escolher a alternativa de stack, banco, storage, hospedagem e autenticação do MVP. Em seguida, criar ADR aceita e iniciar o Slice 1.
+Validar o preview local, escolher a arquitetura de produção e iniciar o Slice 1 persistente após ADRs de banco, storage e autenticação.
 
 ## Agent recomendado para próxima ação
 
